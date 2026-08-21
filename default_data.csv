@@ -1,8 +1,0 @@
-type,prompt,answer,notes
-vocab,amare,to love,1st conjugation verb
-vocab,puella,girl,1st declension noun
-vocab,bellum,war,2nd declension neuter
-conjugation,amare: 1st person present active (I love),amo,Present stem + o
-conjugation,amare: 2nd person present active (You love),amas,Present stem + as
-conjugation,amare: 3rd person present active (He/She/It loves),amat,Present stem + at
-conjugation,amare: 1st person plural (We love),amamus,Present stem + amus

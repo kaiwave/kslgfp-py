@@ -1,0 +1,7 @@
+type,prompt,answer,notes
+vocab,amare,to love,1st conjugation verb
+vocab,bellum,war,2nd declension neuter
+conjugation,amare: 1st person present active (I love),amo,Present stem + o
+conjugation,amare: 2nd person singular present active (You love),amas,Present stem + as
+conjugation endings,am-amare: 3rd person present active (He/She/It loves),at,Amare is 1st conjugation
+conjugation endings,am-amare : 1st person plural (We love),amus,Amare is 1st conjugation

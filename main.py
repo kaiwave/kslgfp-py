@@ -19,7 +19,6 @@ def load_database(filepath): #database loading prog
         print(f"Could not find '{filepath}'.") # basic failsafe
         sys.exit(1)
 
-
 def run_quiz(cards):
     if not cards:
         print("No cards found for this choice") # check if cards of type selected are available
@@ -32,8 +31,13 @@ def run_quiz(cards):
     print(f"\nStarting session with {total} cards. Type 'q' to exit early.\n") # warns user how many cards to do
 
     for i, card in enumerate(cards, 1): # actual game loop
-        print(f"[{i}/{total}] [{card['type'].upper()}] {card['prompt']}") # print the card details and promnpt
-        user_input = input("Your Answer: ").strip() # get answer
+        try:
+            print(f"[{i}/{total}] [{card['type'].upper()}] {card['prompt'].split('-', 1)[1]}")  # for new conjugation endings feature/inline prompt hints
+            answer_prompt = card['prompt'].split('-', 1)[0]
+            user_input = input(f"Your Answer: {answer_prompt}").strip() # get answer
+        except IndexError:
+            print(f"[{i}/{total}] [{card['type'].upper()}] {card['prompt']}")  # fallback for if no inline prompt in csv
+            user_input = input(f"Your Answer: ").strip() # get answer
 
         if user_input.lower() == 'q':
             total = i - 1
@@ -55,7 +59,7 @@ def run_quiz(cards):
 def main():
     database_choice = input("Input file name of database: ").strip()
     if database_choice == "": # blank choice -> default database
-        database_choice = "default_data.csv"
+        database_choice = "default.csv"
     all_cards = load_database(database_choice) # let user pick database
     print(database_choice)
     card_types = sorted(list(set(c["type"] for c in all_cards))) # sets up user choice for which card set to do
