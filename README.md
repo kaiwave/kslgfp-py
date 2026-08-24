@@ -10,7 +10,7 @@ updates below mostly so i can keep track of what im doing:
 
 - patch 0.2
 - - colors !! green for correct answers, red for incorrect. final % is colored red for <50%, yellow for 50%-85% and green for >85%
-- - databases moved to `databases\`, and loading is now easier, only type the name of file. (`databases\` prefix and `.csv` extension not mandatory to enter anymore)
+- - databases moved to `databases/`, and loading is now easier, only type the name of file. (`databases/` prefix and `.csv` extension not mandatory to enter anymore)
 - - refactored basically everything out of main function to help w future expansion development and stuff
 
 
