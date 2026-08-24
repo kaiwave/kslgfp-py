@@ -1,5 +1,5 @@
 # self owned databases
-databases/
+databases/test_french.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
